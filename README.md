@@ -1,3 +1,4 @@
+
 iis_bridge
 ==========
 
@@ -64,3 +65,9 @@ print "Done"
 ```
 
 There is a more detailed documentation at: https://pythonhosted.org/iis_bridge/
+
+
+
+20170217
+
+- I got some bug when I use this modle,so fork the project and fix it.
