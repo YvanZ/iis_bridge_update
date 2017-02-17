@@ -28,7 +28,7 @@ def is_port_taken(port):
     """
     cmd = "%s list sites" % config.APP_CMD
     output = config.run(cmd)
-    return "/*:%s:," % port in output
+    return "/*:%s:" % port in output
 
 
 def convert_site_list_to_binding(output):
@@ -240,4 +240,3 @@ def get_bindings(name):
             bindings = parts[1].split(',state')[0]
             return bindings.split(',')
     return []
-
