@@ -39,8 +39,8 @@ def run(cmd, errMsg=None):
     """
     proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
     output, err = proc.communicate()
-    if type(output) == bytes:
-        output = output.decode(encoding='UTF-8')
+    # if type(output) == bytes:
+        # output = output.decode(encoding='UTF-8')
     if "[Error]" in output or proc.returncode != 0:
         if errMsg:
             raise Exception(errMsg)
