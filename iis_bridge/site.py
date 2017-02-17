@@ -235,7 +235,8 @@ def get_bindings(name):
     output = config.run(cmd, errMsg="You need elevated permissions.")
     for line in output.splitlines():
         parts = line.split('bindings:')
-        if name in parts[0]:
+        parts_name = parts[0].split(" ")[1].strip('"')
+        if name == parts_name:
             bindings = parts[1].split(',state')[0]
             return bindings.split(',')
     return []
